@@ -341,7 +341,10 @@ Footer Section
 
 
 footer {
-    display: inline;
+    position: relative;
+    bottom: 0;
+    width: 100%
+;    display: inline;
     list-style: none;
     text-align: center;
     font-size: 0.8rem;
@@ -350,6 +353,7 @@ footer {
     background-color: #00334E;
     color: white;
     padding: .5rem 0rem .2rem;
+    margin-top: 5rem;
 }
 
 .foot-object {
