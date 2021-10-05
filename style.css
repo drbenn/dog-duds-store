@@ -86,11 +86,16 @@ a {
 }
 
 a:hover {
-    color: #90b4ce;
+    color: #d6d6d6;
 }
 
 
-
+.main {
+    font-family:Arial;
+    width:500px;
+    display:block;
+    margin:0 auto;
+    }
 
 
 
@@ -145,6 +150,14 @@ Hero Section
 /* -------------------------------------
 Card Section
 ------------------------------------- */
+
+.sub-title {
+    font-size:1.7rem;
+    font-weight: 600;
+    padding-top: 2rem;
+    text-align: center;
+}
+
 
 .card-container {
     display: flex;
@@ -251,6 +264,76 @@ margin: 0;
 
 
 
+/* -------------------------------------
+Product Section
+------------------------------------- */
+
+
+
+.product-container {
+    padding-top: 2rem;
+    display: flex;
+    width: 50rem; 
+    justify-self: center; 
+}
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .1fr;
+    grid-template-areas: 
+        "product-image product-specs"
+        "product-description product-description";
+    justify-content: center;
+
+}
+
+
+#product-image {
+    align-self: center;
+    text-align: center;
+    grid-area: product-image;
+} 
+
+.product-image-contain {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#product-specs {
+    text-align: left;
+    padding-left: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: auto;
+    grid-area: product-specs;
+}
+
+.price {
+    padding-left: 5rem;
+}
+
+.add-to-cart {
+    background-color: #145374;
+    color: whitesmoke;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    align-items: center;
+    margin-left: 2.5rem;
+}
+
+.add-to-cart:hover {
+    transition: .2s;
+    box-shadow: 0px 8px 10px #0000006b;
+}
+
+#product-description {
+    grid-area: product-description;
+    margin-bottom: 3rem;
+}
 
 /* -------------------------------------
 Footer Section
@@ -295,6 +378,34 @@ Media Section
     .hero-cover-text {
         width: 17rem;
     }
+    .product-container {
+        width: 80%; 
+    }
+
+    .product-title {
+        font-size: 1.3rem;
+    }
+
+    #product-specs {
+        padding-left: 0.5rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    #product-list {
+        font-size: 0.8rem;
+    }
+
+
+    .price {
+        font-size: 1.1rem;
+        padding-left: 4rem;
+    }
+
+    .add-to-cart {
+        margin-left: 2rem;
+    }
+
 }
 
 
@@ -334,8 +445,45 @@ Media Section
     padding: 0.5rem 0rem .2rem 0rem;
     color: #000000;
     width: 15rem;
-    /* text-shadow: 6px 6px 15px #df5050; */
     }
+
+    .product-container {
+        width: 95%; 
+     }
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr ;
+        grid-template-areas: 
+        "product-image"
+        "product-specs"
+        "product-description";
+        padding-top: 0rem;
+    }
+
+    #product-specs {
+        padding-left: 0rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        text-align: center;
+    }
+
+    #product-list {
+        font-size: 1rem;
+        margin: 0;
+        text-align: start;
+        margin-left: 5rem;
+    }
+
+    .price {
+        padding-left: 0rem;
+    }
+
+    .add-to-cart {
+        margin-left: 0rem;
+    }
+
+
 
     .card-container {
         width: 100%;
